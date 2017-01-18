@@ -1,22 +1,27 @@
-# lamp-vagrant 
-php 5.5
+# Lamp in  vagrant
 
-mysql
-
-phpmyadmin
-
-
-works with codeigniter
+## setup:
+* php 5.5
+* mysql
+* phpmyadmin
 
 
---Procedure--
 
-1. Clone / download
+###Procedure
 
-2. Do vagrant up while in the directory
 
-3. Place your projects in the projects folder.
+1. Install [vagrant] (https://www.vagrantup.com/)  and [virtual box] (https://www.virtualbox.org/)
 
+2. Clone / download
+
+3. Do vagrant up while in the directory
+
+4. Place your projects in the projects folder. 
+
+:)
+
+
+<b> NB </b>default mysql username : *root*       password : *your_password*
 
 
 
