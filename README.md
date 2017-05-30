@@ -1,11 +1,15 @@
 
-# Lamp in  vagrant
+# Lamp & Tomcat7  Vagrant Box
 
 ### Setup:
 * Apache
+* Tomcat 7
 * PHP 5.5
 * Mysql
 * Phpmyadmin
+* Curl
+* Maven
+* Java 7
 * Ubuntu box - trusty64
 
 
@@ -34,3 +38,11 @@
     - phpMyadmin URL: http://localhost:8081/phpmyadmin/
     - Mysql Port : 3381 (forwarded)
     - Apache Port : 8081 (forwarded)
+
+
+
+
+
+
+
+
