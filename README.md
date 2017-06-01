@@ -21,7 +21,7 @@
 
 2. Clone the project
 
-3. While in the `vagrant-lamp` folder , do
+3. While in the `vagrant-box` folder , do
     ```sh
      $ vagrant up
      ```
