@@ -16,6 +16,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, path: "bootstrap.sh"
   config.vm.network :forwarded_port, guest: 80, host: 8081
   config.vm.network "forwarded_port", guest: 3306, host: 3381
+  config.vm.network "forwarded_port", guest: 8080, host: 8080
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -60,7 +61,7 @@ Vagrant.configure("2") do |config|
     config.vm.provider "virtualbox" do |vb|
 
      vb.name = "Vagrant-Box"
-  
+
      # Customize the amount of memory on the VM:
      #vb.memory = "1024"
    end

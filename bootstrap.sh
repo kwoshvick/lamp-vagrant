@@ -135,7 +135,7 @@ echo "
 
 
 
-" > /etc/apache2/sites-available/000-default.conf 
+" > /etc/apache2/sites-available/000-default.conf
 
 # restarting services
 printf '**************************\n\n'
@@ -143,6 +143,45 @@ printf 'restarting mysql and apache2'
 printf '**************************\n\n'
 sudo service apache2 restart
 sudo service mysql restart
+
+
+echo "Installing Tomcat.."
+sudo apt-get install -y tomcat7
+echo "Installing Tomcat7 docs.."
+sudo apt-get install -y tomcat7-docs
+echo "Installing Tomcat7 administration webapps.."
+sudo apt-get install -y tomcat7-admin
+echo "Installing Tomcat7 examples webapps.."
+sudo apt-get install tomcat7-examples
+echo "Installing Maven.."
+sudo apt-get install -y maven
+echo "Installing Java 7.."
+sudo apt-get install -y software-properties-common python-software-properties
+echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
+sudo add-apt-repository ppa:webupd8team/java -y
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install oracle-java7-installer
+echo "Setting environment variables for Java 7.."
+sudo apt-get install -y oracle-java7-set-default
+
+
+sudo echo '<?xml version="1.0" encoding="UTF-8"?>
+ <tomcat-users>
+  <role rolename="manager-gui"/>
+  <role rolename="manager-script"/>
+  <role rolename="manager-jmx"/>
+  <role rolename="manager-status"/>
+  <role rolename="admin-gui"/>
+  <role rolename="admin-script"/>
+  <user username="root" password="your_password" roles="manager-gui,manager-script,manager-jmx,manager-status,admin-gui,admin-script"/>
+ </tomcat-users>' > /etc/tomcat7/tomcat-users.xml
+
+
+sudo service tomcat7 restart 
+
+
+
 
 #end
 echo "--------------------------Finished provisioning.-------------"
