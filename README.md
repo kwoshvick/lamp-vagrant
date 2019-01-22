@@ -3,14 +3,11 @@
 
 ### Setup:
 * Apache
-* Tomcat 7
-* PHP 5.5
+* PHP 7.2
 * Mysql
 * Phpmyadmin
 * Curl
-* Maven
-* Java 7
-* Ubuntu box - trusty64
+* Ubuntu box - Bionic
 
 
 
